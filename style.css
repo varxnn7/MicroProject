@@ -1,0 +1,195 @@
+
+:root {
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --success: #059669;
+    --success-hover: #047857;
+    --secondary: #64748b;
+    --secondary-hover: #475569;
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
+    --card-border: #e2e8f0;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --input-bg: #ffffff;
+    --input-border: #cbd5e1;
+    --input-focus-border: #2563eb;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+    margin: 0;
+}
+
+.form-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 35px 40px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+    max-width: 650px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header-title {
+    font-weight: 700;
+    font-size: 26px;
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-subtitle {
+    color: var(--text-muted);
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #334155;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.status-badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 12px;
+    margin-left: 8px;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+.badge-new {
+    background-color: #d1fae5;
+    color: #065f46;
+    border: 1px solid #a7f3d0;
+}
+
+.badge-existing {
+    background-color: #dbeafe;
+    color: #1e40af;
+    border: 1px solid #bfdbfe;
+}
+
+.form-control {
+    background-color: var(--input-bg);
+    border: 1px solid var(--input-border);
+    color: #0f172a;
+    border-radius: 8px;
+    height: 44px;
+    padding: 10px 14px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.form-control:focus {
+    background-color: #ffffff;
+    border-color: var(--input-focus-border);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    color: #0f172a;
+}
+
+.form-control:disabled, .form-control[readonly] {
+    background-color: #f1f5f9;
+    border-color: #e2e8f0;
+    color: #94a3b8;
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+.btn-container {
+    display: flex;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.btn-custom {
+    flex: 1;
+    height: 44px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-save {
+    background-color: var(--primary);
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+}
+
+.btn-save:hover:not(:disabled) {
+    background-color: var(--primary-hover);
+    color: #ffffff;
+}
+
+.btn-update {
+    background-color: var(--success);
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(5, 150, 105, 0.2);
+}
+
+.btn-update:hover:not(:disabled) {
+    background-color: var(--success-hover);
+    color: #ffffff;
+}
+
+.btn-reset {
+    background-color: var(--secondary);
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(100, 116, 139, 0.2);
+}
+
+.btn-reset:hover:not(:disabled) {
+    background-color: var(--secondary-hover);
+    color: #ffffff;
+}
+
+.btn-custom:disabled {
+    background-color: #e2e8f0 !important;
+    color: #94a3b8 !important;
+    box-shadow: none !important;
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+.alert-toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    min-width: 280px;
+    padding: 14px 20px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    display: none;
+}
